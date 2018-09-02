@@ -3,9 +3,9 @@ out a statement about California being effectively a seriously-sized country in
 its own right.  Undoubtedly true stuff.  Shows up repeatedly in articles like
 https://www.weforum.org/agenda/2016/07/american-state-bigger-economy-than-india/.
 
-Those statements always feel, to me, like implicit, unfair comparisons to other
-US States.  So, here's simple slice-and-dice of very basic facts about the
-states using 2017 numbers:
+Those statements always feel, to me, like implicit comparisons to other US
+states.  So, simple slice-and-dice of very basic facts about the states using
+2017 numbers so one can make explicit comparisons:
 
     $ ipython --no-banner
 
@@ -56,7 +56,6 @@ Pennsylvania could be replaced with Massachusetts/Rhode Island.  Or you could
 include states heading down towards Washington.  Or you could start drawing
 random samples of states and see if California somehow looks like an outlier.
 
-Anyhow, to conclude, California's a big economy.  But it's not outsized relative
-to at least some other parts of the United States containing similar
-populations.
-
+Anyhow, to conclude, California's a big economy.  But it's not (at least
+superficially) outsized relative to other parts of the United States
+that contain similar populations.
