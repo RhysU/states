@@ -54,7 +54,8 @@ states.  So, simple slice-and-dice of very basic facts about the states using
 
 Pennsylvania could be replaced with Massachusetts/Rhode Island.  Or you could
 include states heading down towards Washington.  Or you could start drawing
-random samples of states and see if California somehow looks like an outlier.
+random samples of states constrained to be +/- X million people then see if
+California somehow looks like an outlier.  Etc.
 
 Anyhow, to conclude, California's a big economy.  But it's not (at least
 superficially) outsized relative to other parts of the United States
