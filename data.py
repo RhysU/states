@@ -73,3 +73,12 @@ def load_area():
     return df
 
 area = load_area()
+
+
+def perform_merge():
+    df = pandas.concat((postal, gdp, population, area), axis=1, sort=False)
+    df.index.name = 'State'
+    return df
+
+
+merged = perform_merge()
