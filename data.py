@@ -78,7 +78,30 @@ area = load_area()
 def perform_merge():
     df = pandas.concat((postal, gdp, population, area), axis=1, sort=False)
     df.index.name = 'State'
+    df = df.reset_index(drop=False)
+    df = df.set_index('Abbreviation')
+    df = df.sort_index()
     return df
 
 
 merged = perform_merge()
+
+
+def summarize(*abbreviations):
+    abbreviations = list(sorted(set(abbreviations)))
+    assert abbreviations
+    df = merged
+    df = df.query('index in @abbreviations')
+    df = df.sum(axis=0)
+    return df
+
+
+def analyze(*abbreviation_groups):
+    rows = []
+    for abbreviations in abbreviation_groups:
+        series = summarize(*abbreviations)
+        rows.append(series.to_frame().T)
+    df = pandas.concat(rows, axis=0)
+    df['GDP per capita'] = df.GDP / df.Population
+    df['GDP per area'] = df.GDP / df.Area
+    return df
